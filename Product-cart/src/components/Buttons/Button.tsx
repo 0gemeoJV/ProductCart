@@ -1,4 +1,5 @@
 import iconAddToCart from '../../assets/images/icon-add-to-cart.svg';
+import '../../stylesComponents/ButtonStyles.css';
 
 function Button() {
   return (
