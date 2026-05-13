@@ -4,7 +4,15 @@
     border-radius: 0.8rem;
 }
 
-.dessert-card {
+.dessert-card{
+    margin-bottom: 1rem;
+}
+
+.description-card{
+    margin: 1rem 0 2rem 0;
+}
+
+.img-container{
     display: flex;
     flex-direction: column;
     justify-content: center;

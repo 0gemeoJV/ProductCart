@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+.App{
+    max-width: 375px;
+}
+
+.desserts-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
 :root {
     --red: hsl(14, 86%, 42%);
     --green: hsl(159, 69%, 38%);
@@ -13,4 +24,14 @@
     --rose-400: hsl(7, 20%, 60%);
     --rose-500: hsl(12, 20%, 44%);
     --rose-900: hsl(14, 65%, 9%)
+}
+
+@font-face {
+    font-family: 'RHT-italic';
+    src: url('./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RHT-variable';
+    src: url('./assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
 }
