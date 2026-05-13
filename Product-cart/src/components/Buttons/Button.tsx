@@ -16,7 +16,7 @@ function Button() {
 
   return (
     
-    <>
+    <div className='button-container'>
         { quantity === 0 ? (
           <button className='add-button' onClick={handleClick}>
             <img src={iconAddToCart} alt="Add-to-cart"/>
@@ -24,13 +24,13 @@ function Button() {
           </button>
         ) : (
           <div className='quantity-selector'>
-            <button onClick={()=> setQuantity(q => q - 1)}>-</button>
+            <button className='quantity-button' onClick={()=> setQuantity(q => q - 1)}>-</button>
             <span>{quantity}</span>
-            <button onClick={()=> setQuantity(q => q + 1)}>+</button>
+            <button className='quantity-button' onClick={()=> setQuantity(q => q + 1)}>+</button>
           </div>
           )
         }   
-    </>
+    </div>
   )
 }
 
