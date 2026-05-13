@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+    .App {
+        max-width: 1440px;
+    }
+
+    .desserts-grids {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        row-gap: 1rem;
+    }
+}

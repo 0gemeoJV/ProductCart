@@ -1,4 +1,5 @@
 import './App.css'
+import './Responsive.css'
 import data from './data.json'
 import Cards from './components/Cards'
 

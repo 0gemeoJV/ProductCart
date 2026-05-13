@@ -9,9 +9,9 @@ function Cards({ dessert, index }: { dessert: any, index: number }) {
                 <Button />
             </div>
             <div className='description-card'>
-                <p>{dessert.category}</p>
-                <p>{dessert.name}</p>
-                <p>${dessert.price.toFixed(2)}</p>
+                <p className='category'>{dessert.category}</p>
+                <p className='name'>{dessert.name}</p>
+                <p className='price'>${dessert.price.toFixed(2)}</p>
             </div>
         </div>
     )

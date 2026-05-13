@@ -8,11 +8,28 @@
     margin-bottom: 1rem;
 }
 
+.name{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--rose-900);
+}
+
+.category{
+    font-weight: 400;
+    color: var(--rose-500);
+}
+
+.price{
+    font-weight: 600;
+    color: var(--red);
+}
+
 .description-card{
     margin: 1rem 0 2rem 0;
 }
 
 .img-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
