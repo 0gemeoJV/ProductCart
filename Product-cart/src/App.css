@@ -3,6 +3,7 @@
     margin: 0.2rem;
     box-sizing: border-box;
     font-family: 'RHT-variable';
+    outline: 1px red solid;
 }
 
 .App{
@@ -25,6 +26,26 @@
 
 .desserts-sections h1{
     color: var(--rose-900);
+}
+
+.your-cart{
+    background-color: var(--rose-900);
+    border-radius: 0.8rem;
+}
+
+.your-cart h1{
+    color: var(--red);
+    background-color: transparent;
+}
+
+.added-items{
+    background-color: transparent;
+    color: var(--rose-500);
+}
+
+.added-items p{
+    color: var(--rose-400);
+    background-color: transparent;
 }
 
 :root {

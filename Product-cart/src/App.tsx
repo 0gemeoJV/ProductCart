@@ -20,6 +20,12 @@ function App() {
           ))}
         </div>
       </section>
+      <section className='your-cart'>
+          <h1>Your Cart(0)</h1>
+          <div className='added-items'>
+            <p>Your added items will appear here</p>
+          </div>
+      </section>
     </main>
   )
 }
