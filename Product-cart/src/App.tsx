@@ -2,6 +2,7 @@ import './App.css'
 import './Responsive.css'
 import data from './data.json'
 import Cards from './components/Cards'
+import YourCart from './components/YourCart'
 
 
 function App() {
@@ -20,11 +21,9 @@ function App() {
           ))}
         </div>
       </section>
-      <section className='your-cart'>
+      <section className='your-cart-section'>
           <h1>Your Cart(0)</h1>
-          <div className='added-items'>
-            <p>Your added items will appear here</p>
-          </div>
+          <YourCart />
       </section>
     </main>
   )

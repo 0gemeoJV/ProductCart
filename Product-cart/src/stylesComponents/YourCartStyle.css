@@ -1,0 +1,14 @@
+.added-items{
+    background-color: transparent;
+    color: var(--rose-500);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.added-items p{
+    color: var(--rose-400);
+    background-color: transparent;
+}

@@ -28,23 +28,14 @@
     color: var(--rose-900);
 }
 
-.your-cart{
+.your-cart-section{
     background-color: var(--rose-900);
     border-radius: 0.8rem;
+    padding: 1.4rem;
 }
 
-.your-cart h1{
+.your-cart-section h1{
     color: var(--red);
-    background-color: transparent;
-}
-
-.added-items{
-    background-color: transparent;
-    color: var(--rose-500);
-}
-
-.added-items p{
-    color: var(--rose-400);
     background-color: transparent;
 }
 
