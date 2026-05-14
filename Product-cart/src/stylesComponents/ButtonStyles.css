@@ -1,39 +1,52 @@
-button {
-    all: unset;
-}
-
-.add-button, .quantity-button, .quantity-selector{
+/* Ajuste para que ambos compartilhem o mesmo dimensionamento base */
+.add-button, 
+.quantity-selector {
+    position: relative;
+    z-index: 10;
+    margin-top: -25px;
     display: flex;
     align-items: center;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
+    height: 2.75rem;        /* Altura total fixa (1.5rem de height + paddings) */
+    width: 11rem;           /* Defina uma largura fixa para ambos não variarem */
     border-radius: 50px;
     font-family: 'RHT-variable';
     font-size: 0.875rem;
     font-weight: 600;
-    
 }
 
-.add-button, .quantity-button{
+.add-button {
+    gap: 5px;
+    justify-content: center;
     padding: 0.625rem 2rem;
-    height: 1.5rem;
-}
-
-.add-button{
-    border: 1px solid var(--rose-500);
+    border: 1px solid var(--rose-400);
+    background-color: var(--rose-50);
     color: var(--rose-900);
-}
-
-.add-button:hover {
-    border: 1px solid var(--red);
-    color: var(--red);
     cursor: pointer;
 }
 
-
-
-.quantity-selector{
-    margin: 0;
+.quantity-selector {
     justify-content: space-between;
     background-color: var(--red);
     color: var(--rose-50);
-    border: 1px solid white; /* Opcional: para dar um destaque */
+    padding: 0 1rem; /* Padding menor nas laterais para os botões internos */
+}
+
+/* Botões de + e - dentro do seletor */
+.quantity-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--rose-50);
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--rose-50);
+}
+
+.quantity-button:hover {
+    background-color: var(--rose-50);
+    color: var(--red);
 }
