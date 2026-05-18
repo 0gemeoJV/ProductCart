@@ -1,12 +1,12 @@
 import Button from './Buttons/Button'
 import '../../src/stylesComponents/CardStyle.css';
 
-function Cards({ dessert, index }: { dessert: any, index: number }) {
+function Cards({ dessert, index, updateCart }: { dessert: any, index: number, updateCart: (dessert: any, quantity: number) => void }) {
     return (
         <div className='dessert-card' key={index}>
             <div className='img-container'>
                 <img src={dessert.image.mobile} alt="dessert-image" className='img-product' />
-                <Button />
+                <Button updateCart={updateCart} dessert={dessert} />
             </div>
             <div className='description-card'>
                 <p className='category'>{dessert.category}</p>

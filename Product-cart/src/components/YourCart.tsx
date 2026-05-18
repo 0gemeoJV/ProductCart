@@ -2,7 +2,7 @@ import emptyCart from '/images/illustration-empty-cart.svg'
 import { useState } from 'react';
 import '../stylesComponents/YourCartStyle.css';
 
-function YourCart() {
+function YourCart( { cartItems }: { cartItems: any[] } ) {
     const [quantity, setQuantity] = useState(0);
 
     return (
@@ -16,6 +16,9 @@ function YourCart() {
                 <div className='added-items'>
                     <p>Items in your cart:</p>
                     <button onClick={() => setQuantity(0)}>Clear Cart</button>
+                    {cartItems.map((item, index) => (
+                        <p key={index}>{item.name}: {item.quantity}</p>
+                    ))}
                     <p>{quantity}</p>
                 </div>
             )}

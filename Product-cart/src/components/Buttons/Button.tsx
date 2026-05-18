@@ -2,16 +2,17 @@ import iconAddToCart from '../../../public/images/icon-add-to-cart.svg';
 import '../../stylesComponents/ButtonStyles.css';
 import { useState } from 'react';
 
-function Button() {
+function Button({ updateCart, dessert }: { updateCart: (dessert: any, quantity: number) => void, dessert: any }) {
   const [isActive, setIsActive] = useState(false);
   const [quantity, setQuantity] = useState(0);
 
   /*criar função para adicionar ao carrinho*/
   const handleClick = () =>{
     setIsActive(!isActive);
-    setQuantity(quantity + 1);
-    console.log(`Produto adicionado ao carrinho. Quantidade: ${quantity + 1}`);
-
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+    updateCart(dessert, newQuantity);
+    console.log(`Added ${dessert.name} to cart. Quantity: ${newQuantity}`);
   }
 
   return (
