@@ -6,28 +6,32 @@ function Button({ updateCart, dessert }: { updateCart: (dessert: any, quantity: 
   const [isActive, setIsActive] = useState(false);
   const [quantity, setQuantity] = useState(0);
 
-  /*criar função para adicionar ao carrinho*/
-  const handleClick = () =>{
+  const Increment = () =>{
     setIsActive(!isActive);
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
     updateCart(dessert, newQuantity);
-    console.log(`Added ${dessert.name} to cart. Quantity: ${newQuantity}`);
+  }
+
+  const Decrement = () => {
+    const newQuantity = quantity - 1;
+    setQuantity(newQuantity);
+    updateCart(dessert, newQuantity);
   }
 
   return (
     
     <div className='button-container'>
         { quantity === 0 ? (
-          <button className='add-button' onClick={handleClick}>
+          <button className='add-button' onClick={Increment}>
             <img src={iconAddToCart} alt="Add-to-cart"/>
             Add to Cart
           </button>
         ) : (
           <div className='quantity-selector'>
-            <button className='quantity-button' onClick={()=> setQuantity(q => q - 1)}>-</button>
+            <button className='quantity-button' onClick={Decrement}>-</button>
             <span>{quantity}</span>
-            <button className='quantity-button' onClick={()=> setQuantity(q => q + 1)}>+</button>
+            <button className='quantity-button' onClick={Increment}>+</button>
           </div>
           )
         }   
