@@ -12,3 +12,9 @@
     color: var(--rose-400);
     background-color: transparent;
 }
+
+.item-pricing{
+    display: flex;
+    gap: 0.5rem;
+    background-color: transparent;
+}
