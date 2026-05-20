@@ -1,6 +1,6 @@
 import '../../stylesComponents/ButtonStyles.css';
 
-function OrdinayButtons({props}: {props: string}) {
+function OrdinaryButtons({props}: {props: string}) {
   return (
     <>
         <button className='ordinary-button'>
@@ -10,4 +10,4 @@ function OrdinayButtons({props}: {props: string}) {
   )
 }
 
-export default OrdinayButtons
+export default OrdinaryButtons
