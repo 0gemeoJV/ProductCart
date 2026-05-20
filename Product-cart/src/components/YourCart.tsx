@@ -1,7 +1,7 @@
 import emptyCart from '/images/illustration-empty-cart.svg'
 import '../stylesComponents/YourCartStyle.css';
 import ItemCard from './ItemCard';
-
+import OrdinaryButtons from './Buttons/OrdinaryButtons';
 
 function YourCart({ cartItems }: { cartItems: any[] }) {
     console.log(cartItems);
@@ -20,7 +20,7 @@ function YourCart({ cartItems }: { cartItems: any[] }) {
                     ))}
                     <p>Total items: {cartItems.reduce((total, item) => total + item.quantity, 0)}</p>
                     <p>Order Total: ${cartItems.reduce((total, item) => total + (item.quantity * item.price), 0).toFixed(2)}</p>
-                    
+                    <OrdinaryButtons props="Confirm Order" />
                 </div>
             )}
         </>
