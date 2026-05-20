@@ -63,3 +63,12 @@
     /* Este filtro converte a cor branca do SVG original para o tom exato do vermelho (--red) */
     filter: invert(26%) sepia(87%) saturate(6281%) hue-rotate(349deg) brightness(96%) contrast(94%);
 }
+
+.ordinary-button {
+    width: 100%;
+    padding: 0.625rem;
+    border: none;
+    background-color: var(--red);
+    color: var(--rose-50);
+    cursor: pointer;
+}
