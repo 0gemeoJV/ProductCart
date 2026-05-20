@@ -1,3 +1,12 @@
+.add-button,
+.quantity-selector,
+.ordinary-button{
+    border-radius: 50px;
+    font-family: 'RHT-variable';
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
 /* Ajuste para que ambos compartilhem o mesmo dimensionamento base */
 .add-button, 
 .quantity-selector {
@@ -9,10 +18,10 @@
     box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
     height: 2.75rem;        /* Altura total fixa (1.5rem de height + paddings) */
     width: 11rem;           /* Defina uma largura fixa para ambos não variarem */
-    border-radius: 50px;
+   /* border-radius: 50px;
     font-family: 'RHT-variable';
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 600;*/
 }
 
 .add-button {
