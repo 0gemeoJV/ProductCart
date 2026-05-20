@@ -48,5 +48,9 @@
 
 .quantity-button:hover {
     background-color: var(--rose-50);
-    color: var(--red);
+}
+
+.quantity-button:hover img {
+    /* Este filtro converte a cor branca do SVG original para o tom exato do vermelho (--red) */
+    filter: invert(26%) sepia(87%) saturate(6281%) hue-rotate(349deg) brightness(96%) contrast(94%);
 }
