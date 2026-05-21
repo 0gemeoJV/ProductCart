@@ -4,7 +4,7 @@ import '../stylesComponents/YourCartStyle.css';
 import ItemCard from './ItemCard';
 import OrdinaryButtons from './Buttons/OrdinaryButtons';
 
-function YourCart({ cartItems }: { cartItems: any[] }) {
+function YourCart({ cartItems, setCartItems }: { cartItems: any[]; setCartItems: React.Dispatch<React.SetStateAction<any[]>> }) {
     console.log(cartItems);
 
     return (
@@ -17,7 +17,7 @@ function YourCart({ cartItems }: { cartItems: any[] }) {
             ) : (
                 <div className='added-items'>
                     {cartItems.map((item, index) => (
-                        <ItemCard key={index} item={item} index={index} />
+                        <ItemCard key={index} item={item} index={index} setCartItems={setCartItems} />
                     ))}
                     <div className='price-order'>
                         <p>Order Total:</p>
