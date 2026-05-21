@@ -3,7 +3,7 @@
     margin: 0.2rem;
     box-sizing: border-box;
     font-family: 'RHT-variable';
-    outline: 1px red solid;
+    /* outline: 1px red solid; */
 }
 
 .App{
@@ -29,7 +29,7 @@
 }
 
 .your-cart-section{
-    background-color: var(--rose-100);
+    background-color: var(--rose-50);
     border-radius: 0.8rem;
     padding: 1.4rem;
 }

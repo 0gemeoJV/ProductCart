@@ -1,5 +1,5 @@
 .added-items{
-    background-color: transparent;
+    background-color: var(--rose-50);
     color: var(--rose-500);
     display: flex;
     justify-content: center;
@@ -10,4 +10,46 @@
 .added-items p{
     color: var(--rose-400);
     background-color: transparent;
+}
+
+.price-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1rem;
+}
+
+.price-order p{
+    color: var(--rose-900);
+}
+
+.price{
+    color: var(--rose-900);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carbon-neutral-msg{
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: var(--rose-100);
+}
+
+.carbon-neutral-msg p{
+    color: var(--rose-900);
+    font-size: 0.9rem;
+}
+
+.carbon-neutral{
+    color: var(--rose-900);
+    font-weight: bold;
+}
+
+.carbon-neutral-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
 }
