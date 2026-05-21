@@ -1,6 +1,8 @@
 import iconConfirmed from '../../public/images/icon-order-confirmed.svg';
 import '../stylesComponents/OrderConfirmedStyle.css';
-function OrderConfirmed() {
+import OrdinaryButtons from './Buttons/OrdinaryButtons';
+
+function OrderConfirmed({ cartItems }: { cartItems: any[] }) {
     return (
         <div className="order-confirmed">
             <img src={iconConfirmed} alt="Order-confirmed" />
@@ -8,6 +10,25 @@ function OrderConfirmed() {
                 <h1>Order Confirmed</h1>
                 <p>We hope you enjoy your food!</p>
             </div>
+            <div className='added-items'>
+                {cartItems.map((item, index) => (
+                    <div className='item-card' key={index}>
+                        <div className='item-details'>
+                            <h3 className='item-name'>{item.name}</h3>
+                            <div className='item-pricing'>
+                                <span className='item-qty'>{item.quantity}x</span>
+                                <span className='item-price'>@ ${item.price.toFixed(2)}</span>
+                                <span className='item-total-price'>${(item.quantity * item.price).toFixed(2)}</span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+                <div className='price-order'>
+                    <p>Order Total:</p>
+                    <h2 className='price'> ${cartItems.reduce((total, item) => total + (item.quantity * item.price), 0).toFixed(2)}</h2>
+                </div>
+            </div>
+            <OrdinaryButtons props="Start new order" />
         </div>
     )
 }
