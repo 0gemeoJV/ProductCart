@@ -48,7 +48,7 @@ function App() {
           <h1>Your Cart({cartItems.reduce((total, item) => total + item.quantity, 0)})</h1>
           <YourCart cartItems={cartItems} />
       </section>
-      <OrderConfirmed />
+      <OrderConfirmed cartItems={cartItems} />
     </main>
   )
 }
