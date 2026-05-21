@@ -4,6 +4,7 @@ import data from './data.json'
 import Cards from './components/Cards'
 import YourCart from './components/YourCart'
 import { useState } from 'react'
+import OrderConfirmed from './components/OrderConfirmed'
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <h1>Your Cart({cartItems.reduce((total, item) => total + item.quantity, 0)})</h1>
           <YourCart cartItems={cartItems} />
       </section>
+      <OrderConfirmed />
     </main>
   )
 }
