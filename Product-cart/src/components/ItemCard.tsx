@@ -2,6 +2,10 @@ import removeIcon from '/images/icon-remove-item.svg'
 import '../stylesComponents/ItemCard.css';
 
 function ItemCard({ item, index }: { item: any; index: number }) {
+    function handleRemove() {
+        console.log('Remove item:', item);
+    }
+    console.log('Item:', item);
     return (
         <div className='item-card' key={index}>
             <div className='item-details'>
@@ -12,7 +16,7 @@ function ItemCard({ item, index }: { item: any; index: number }) {
                     <span className='item-total-price'>${(item.quantity * item.price).toFixed(2)}</span>
                 </div>
             </div>
-            <img src={removeIcon} alt="Remove item" className='remove-icon' />
+            <img src={removeIcon} alt="Remove item" className='remove-icon' onClick={handleRemove} />
         </div>
     )
 }
