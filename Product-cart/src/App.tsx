@@ -46,7 +46,7 @@ function App() {
       </section>
       <section className='your-cart-section'>
           <h1>Your Cart({cartItems.reduce((total, item) => total + item.quantity, 0)})</h1>
-          <YourCart cartItems={cartItems} />
+          <YourCart cartItems={cartItems} setCartItems = {setCartItems}/>
       </section>
       <OrderConfirmed cartItems={cartItems} />
     </main>
