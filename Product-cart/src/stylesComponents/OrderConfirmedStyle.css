@@ -16,3 +16,14 @@
 .order-text p{
     color: var(--rose-500)
 }
+
+.order-total{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.order-total h2{
+    font-size: 1.8rem;
+}

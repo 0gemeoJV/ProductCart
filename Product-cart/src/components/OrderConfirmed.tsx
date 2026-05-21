@@ -23,7 +23,7 @@ function OrderConfirmed({ cartItems }: { cartItems: any[] }) {
                         </div>
                     </div>
                 ))}
-                <div className='price-order'>
+                <div className='order-total'>
                     <p>Order Total:</p>
                     <h2 className='price'> ${cartItems.reduce((total, item) => total + (item.quantity * item.price), 0).toFixed(2)}</h2>
                 </div>
