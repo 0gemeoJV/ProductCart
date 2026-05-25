@@ -17,6 +17,16 @@
     color: var(--rose-500)
 }
 
+.item-card-order{
+    display: flex;
+    justify-content:left;
+    width: 100%;
+    align-items: center;
+    background-color: var(--rose-50);
+    border-bottom: 1px solid var(--rose-100);
+}
+
+
 .order-total{
     display: flex;
     justify-content: space-between;
@@ -26,4 +36,23 @@
 
 .order-total h2{
     font-size: 1.8rem;
+}
+
+.item-details {
+    min-width: 0; /* Truque crucial para o flexbox aceitar o text-overflow */
+    margin-right: 1rem;
+}
+
+/* Aplica o efeito de cortar o texto */
+.item-name {
+    white-space: nowrap;      /* Impede o texto de quebrar linha */
+    overflow: hidden;         /* Esconde o que passar do limite */
+    text-overflow: ellipsis;  /* Adiciona os "..." automaticamente */
+    font-size: 1rem;          /* Ajuste o tamanho conforme seu design */
+    color: var(--rose-900);
+}
+
+.item-total-order span{
+    font-size: 1.2rem;
+    color: var(--rose-900);
 }

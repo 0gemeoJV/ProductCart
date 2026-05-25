@@ -12,14 +12,16 @@ function OrderConfirmed({ cartItems }: { cartItems: any[] }) {
             </div>
             <div className='added-items'>
                 {cartItems.map((item, index) => (
-                    <div className='item-card' key={index}>
+                    <div className='item-card-order' key={index}>
                         <div className='item-details'>
                             <h3 className='item-name'>{item.name}</h3>
                             <div className='item-pricing'>
                                 <span className='item-qty'>{item.quantity}x</span>
                                 <span className='item-price'>@ ${item.price.toFixed(2)}</span>
-                                <span className='item-total-price'>${(item.quantity * item.price).toFixed(2)}</span>
                             </div>
+                        </div>
+                        <div className='item-total-order'>
+                            <span className='item-total-price'>${(item.quantity * item.price).toFixed(2)}</span>
                         </div>
                     </div>
                 ))}
