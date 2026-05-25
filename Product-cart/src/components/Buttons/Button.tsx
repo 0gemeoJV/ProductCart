@@ -1,28 +1,27 @@
 import iconAddToCart from '../../../public/images/icon-add-to-cart.svg';
 import '../../stylesComponents/ButtonStyles.css';
-import { useState } from 'react';
 import iconIncrement from '../../../public/images/icon-increment-quantity.svg';
 import iconDecrement from '../../../public/images/icon-decrement-quantity.svg';
 
-function Button({ updateCart, dessert }: { updateCart: (dessert: any, quantity: number) => void, dessert: any }) {
-  const [isActive, setIsActive] = useState(false);
-  const [quantity, setQuantity] = useState(0);
+interface ButtonProps {
+  updateCart: (dessert: any, quantity: number) => void;
+  dessert: any;
+  quantity: number;
+}
 
-  const Increment = () =>{
-    setIsActive(!isActive);
+function Button({ updateCart, dessert, quantity }: ButtonProps) {
+
+  const Increment = () => {
     const newQuantity = quantity + 1;
-    setQuantity(newQuantity);
     updateCart(dessert, newQuantity);
   }
 
   const Decrement = () => {
     const newQuantity = quantity - 1;
-    setQuantity(newQuantity);
     updateCart(dessert, newQuantity);
   }
 
   return (
-    
     <div className='button-container'>
         { quantity === 0 ? (
           <button className='add-button' onClick={Increment}>

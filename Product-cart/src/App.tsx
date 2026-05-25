@@ -6,9 +6,7 @@ import YourCart from './components/YourCart'
 import { useState } from 'react'
 import OrderConfirmed from './components/OrderConfirmed'
 
-
 function App() {
-
   const [cartItems, setCartItems] = useState<any[]>([]);
 
   const updateCart = (dessert: any, quantity: number) => {
@@ -40,13 +38,14 @@ function App() {
               dessert={dessert}
               index={index}
               updateCart={updateCart}
+              cartItems={cartItems} 
             />
           ))}
         </div>
       </section>
       <section className='your-cart-section'>
           <h1>Your Cart({cartItems.reduce((total, item) => total + item.quantity, 0)})</h1>
-          <YourCart cartItems={cartItems} setCartItems = {setCartItems}/>
+          <YourCart cartItems={cartItems} setCartItems={setCartItems} updateCart={updateCart} />
       </section>
       <OrderConfirmed cartItems={cartItems} />
     </main>

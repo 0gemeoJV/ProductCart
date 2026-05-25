@@ -1,10 +1,11 @@
 import removeIcon from '/images/icon-remove-item.svg'
 import '../stylesComponents/ItemCard.css';
 
-function ItemCard({ item, index, setCartItems }: { item: any; index: number; setCartItems: React.Dispatch<React.SetStateAction<any[]>> }) {
+function ItemCard({ item, index, setCartItems, updateCart }: { item: any; index: number; setCartItems: React.Dispatch<React.SetStateAction<any[]>>; updateCart: (dessert: any, quantity: number) => void }) {
     function handleRemove() {
         console.log('Remove item:', item);
         setCartItems(prevItems => prevItems.filter((_, i) => i !== index));
+        updateCart(item, 0);
     }
     console.log('Item:', item);
     return (
