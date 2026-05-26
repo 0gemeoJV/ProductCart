@@ -5,7 +5,7 @@ interface CardsProps {
     dessert: any;
     index: number;
     updateCart: (dessert: any, quantity: number) => void;
-    cartItems: any[]; // 👈 Nova tipagem nas props
+    cartItems: any[]; 
 }
 
 function Cards({ dessert, index, updateCart, cartItems }: CardsProps) {
@@ -17,7 +17,6 @@ function Cards({ dessert, index, updateCart, cartItems }: CardsProps) {
         <div className='dessert-card' key={index}>
             <div className='img-container'>
                 <img src={dessert.image.mobile} alt="dessert-image" className='img-product' />
-                {/* 📦 Enviamos a quantidade calculada como prop */}
                 <Button updateCart={updateCart} dessert={dessert} quantity={currentQuantity} />
             </div>
             <div className='description-card'>

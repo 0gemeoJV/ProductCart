@@ -8,6 +8,7 @@
 
 .App{
     max-width: 375px;
+    margin:1.2rem;
 }
 
 .desserts-grids {
@@ -32,6 +33,7 @@
     background-color: var(--rose-50);
     border-radius: 0.8rem;
     padding: 1.4rem;
+    height: 100%;
 }
 
 .your-cart-section h1{
