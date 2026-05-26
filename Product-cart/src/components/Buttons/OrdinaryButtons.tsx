@@ -1,13 +1,16 @@
 import '../../stylesComponents/ButtonStyles.css';
 
-function OrdinaryButtons({props}: {props: string}) {
+type OrdinaryButtonsProps = {
+  props: string;
+  onClick: () => void;
+};
+
+function OrdinaryButtons({ props, onClick }: OrdinaryButtonsProps) {
   return (
-    <>
-        <button className='ordinary-button'>
-            {props}
-        </button>
-    </>
-  )
+    <button className='ordinary-button' onClick={onClick}>
+      {props}
+    </button>
+  );
 }
 
-export default OrdinaryButtons
+export default OrdinaryButtons;

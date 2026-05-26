@@ -4,7 +4,7 @@ import '../stylesComponents/YourCartStyle.css';
 import ItemCard from './ItemCard';
 import OrdinaryButtons from './Buttons/OrdinaryButtons';
 
-function YourCart({ cartItems, setCartItems, updateCart }: { cartItems: any[]; setCartItems: React.Dispatch<React.SetStateAction<any[]>>; updateCart: (dessert: any, quantity: number) => void }) {
+function YourCart({ cartItems, setCartItems, updateCart, setOrderConfirmed }: { cartItems: any[]; setCartItems: React.Dispatch<React.SetStateAction<any[]>>; updateCart: (dessert: any, quantity: number) => void; setOrderConfirmed: React.Dispatch<React.SetStateAction<boolean>> }) {
     console.log(cartItems);
 
     return (
@@ -27,7 +27,7 @@ function YourCart({ cartItems, setCartItems, updateCart }: { cartItems: any[]; s
                         <img src={carbonNeutralIcon} alt="Carbon neutral icon" className='carbon-neutral-icon' />
                         <p>This is a <span className='carbon-neutral'>carbon-neutral</span> delivery</p>
                     </div>
-                    <OrdinaryButtons props="Confirm Order" />
+                    <OrdinaryButtons props="Confirm Order" onClick={() => setOrderConfirmed(true)} />
                 </div>
             )}
         </>

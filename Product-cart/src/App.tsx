@@ -8,6 +8,7 @@ import OrderConfirmed from './components/OrderConfirmed'
 
 function App() {
   const [cartItems, setCartItems] = useState<any[]>([]);
+  const [orderConfirmed, setOrderConfirmed] = useState(false);
 
   const updateCart = (dessert: any, quantity: number) => {
     setCartItems(prevItems => {
@@ -45,9 +46,11 @@ function App() {
       </section>
       <section className='your-cart-section'>
           <h1>Your Cart({cartItems.reduce((total, item) => total + item.quantity, 0)})</h1>
-          <YourCart cartItems={cartItems} setCartItems={setCartItems} updateCart={updateCart} />
+          <YourCart cartItems={cartItems} setCartItems={setCartItems} updateCart={updateCart} setOrderConfirmed={setOrderConfirmed} />
       </section>
-      <OrderConfirmed cartItems={cartItems} />
+      {
+        orderConfirmed && <OrderConfirmed cartItems={cartItems} />
+      }
     </main>
   )
 }
