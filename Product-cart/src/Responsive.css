@@ -2,6 +2,7 @@
     .App {
         display: flex;
         max-width: 1440px;
+        margin:3.4rem;
     }
 
     .desserts-grids {
