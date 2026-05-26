@@ -1,3 +1,11 @@
+.item-ordered {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
 .order-confirmed{
     padding: 1.2rem;
 }
@@ -19,7 +27,7 @@
 
 .item-card-order{
     display: flex;
-    justify-content:left;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
     background-color: var(--rose-50);
@@ -32,6 +40,11 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    padding-top: 0.5rem;
+}
+
+.order-total p{
+    color: var(--rose-900);
 }
 
 .order-total h2{
