@@ -11,7 +11,7 @@ function OrderConfirmed({ cartItems }: { cartItems: any[] }) {
                 <h1>Order Confirmed</h1>
                 <p>We hope you enjoy your food!</p>
             </div>
-            <div className='added-items'>
+            <div className='added-items-order'>
                 {cartItems.map((item, index) => (
                     <div className='item-card-order' key={index}>
                         <img src={item.image.mobile} alt="Dessert image" className='item-ordered' />

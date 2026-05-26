@@ -6,13 +6,18 @@
     object-fit: cover;
 }
 
-.order-confirmed{
-    padding: 1.2rem;
+.added-items-order{
+    margin-bottom: 3rem;
 }
+
 
 .order-confirmed img{
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
+}
+
+.order-text{
+    margin-bottom: 2.2rem;
 }
 
 .order-text h1{

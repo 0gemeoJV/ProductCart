@@ -1,4 +1,4 @@
-.added-items{
+.added-items, .added-items-order{
     background-color: var(--rose-50);
     color: var(--rose-500);
     display: flex;
