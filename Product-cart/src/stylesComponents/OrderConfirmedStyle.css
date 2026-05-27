@@ -33,10 +33,10 @@
 .item-card-order{
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 88%;
     align-items: center;
     background-color: var(--rose-50);
-    border-bottom: 1px solid var(--rose-100);
+    border-bottom: 2px solid var(--rose-100);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
@@ -62,6 +62,11 @@
 .item-details {
     min-width: 0; /* Truque crucial para o flexbox aceitar o text-overflow */
     margin-right: 1rem;
+}
+
+.item-pricing{
+    display: flex;
+    gap: 1rem;
 }
 
 /* Aplica o efeito de cortar o texto */
