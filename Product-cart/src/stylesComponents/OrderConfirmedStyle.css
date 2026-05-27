@@ -1,6 +1,6 @@
 .item-ordered {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     border-radius: 8px;
     margin-right: 1rem;
     object-fit: cover;
@@ -33,10 +33,12 @@
 .item-card-order{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     align-items: center;
     background-color: var(--rose-50);
     border-bottom: 1px solid var(--rose-100);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 
@@ -46,6 +48,7 @@
     width: 100%;
     align-items: center;
     padding-top: 0.5rem;
+    padding: 1.5rem;
 }
 
 .order-total p{
