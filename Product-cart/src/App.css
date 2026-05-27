@@ -39,6 +39,7 @@
 .your-cart-section h1{
     color: var(--red);
     background-color: transparent;
+    padding:1rem;
 }
 
 :root {
