@@ -12,11 +12,12 @@ function Cards({ dessert, index, updateCart, cartItems }: CardsProps) {
     // 🔍 Procura a quantidade atual deste item no carrinho
     const cartItem = cartItems.find(item => item.name === dessert.name);
     const currentQuantity = cartItem ? cartItem.quantity : 0;
+    const imageClass = `img-product ${currentQuantity > 0 ? 'selected-product' : ''}`;
 
     return (
         <div className='dessert-card' key={index}>
             <div className='img-container'>
-                <img src={dessert.image.mobile} alt="dessert-image" className='img-product' />
+                <img src={dessert.image.mobile} alt="dessert-image" className={imageClass} />
                 <Button updateCart={updateCart} dessert={dessert} quantity={currentQuantity} />
             </div>
             <div className='description-card'>

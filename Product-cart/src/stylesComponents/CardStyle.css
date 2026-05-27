@@ -14,6 +14,10 @@
     color: var(--rose-900);
 }
 
+.selected-product{
+    outline: 2px solid var(--red);
+}
+
 .category{
     font-weight: 400;
     color: var(--rose-500);
