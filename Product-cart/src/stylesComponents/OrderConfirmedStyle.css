@@ -24,21 +24,15 @@
 }
 
 .item-ordered {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    margin-right: 1rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
     object-fit: cover;
 }
 
 .added-items-order{
     margin-bottom: 3rem;
-}
-
-
-.order-confirmed img{
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+    border-radius: 0.5rem;
 }
 
 .order-text{
@@ -57,13 +51,11 @@
 
 .item-card-order{
     display: flex;
-    justify-content: space-between;
-    width: 88%;
+    width: 87%;
     align-items: center;
-    background-color: var(--rose-50);
     border-bottom: 2px solid var(--rose-100);
+    padding: 1rem 0;
 }
-
 
 .order-total{
     display: flex;
@@ -84,15 +76,6 @@
 
 .item-details {
     min-width: 0; /* Truque crucial para o flexbox aceitar o text-overflow */
-    margin-right: 1rem;
-    flex-grow: 1; /* Faz o título ocupar todo o espaço restante disponível */
-    
-
-}
-
-.item-pricing{
-    display: flex;
-    gap: 1rem;
 }
 
 /* Aplica o efeito de cortar o texto */
