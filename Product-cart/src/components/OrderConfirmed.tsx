@@ -2,7 +2,7 @@ import iconConfirmed from '../../public/images/icon-order-confirmed.svg';
 import '../stylesComponents/OrderConfirmedStyle.css';
 import OrdinaryButtons from './Buttons/OrdinaryButtons';
 
-function OrderConfirmed({ cartItems }: { cartItems: any[] }) {
+function OrderConfirmed({ cartItems, resetCart }: { cartItems: any[]; resetCart: () => void }) {
     return (
         <div className='order-confirmed-overlay'>
             <div className="order-confirmed">
@@ -32,7 +32,7 @@ function OrderConfirmed({ cartItems }: { cartItems: any[] }) {
                         <h2 className='price'> ${cartItems.reduce((total, item) => total + (item.quantity * item.price), 0).toFixed(2)}</h2>
                     </div>
                 </div>
-                <OrdinaryButtons props="Start New Order" onClick={() => { }} />
+                <OrdinaryButtons props="Start New Order" onClick={resetCart} />
             </div>
         </div>
     )

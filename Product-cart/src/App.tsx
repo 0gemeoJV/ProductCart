@@ -10,6 +10,11 @@ function App() {
   const [cartItems, setCartItems] = useState<any[]>([]);
   const [orderConfirmed, setOrderConfirmed] = useState(false);
 
+  const resetCart = () => {
+    setCartItems([]);
+    setOrderConfirmed(false);
+  };
+
   const updateCart = (dessert: any, quantity: number) => {
     setCartItems(prevItems => {
       const existingItem = prevItems.find(item => item.name === dessert.name);
@@ -49,7 +54,7 @@ function App() {
           <YourCart cartItems={cartItems} setCartItems={setCartItems} updateCart={updateCart} setOrderConfirmed={setOrderConfirmed} />
       </section>
       {
-        orderConfirmed && <OrderConfirmed cartItems={cartItems} />
+        orderConfirmed && <OrderConfirmed cartItems={cartItems} resetCart={resetCart} />
       }
     </main>
   )
