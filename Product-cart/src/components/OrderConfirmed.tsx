@@ -32,7 +32,7 @@ function OrderConfirmed({ cartItems }: { cartItems: any[] }) {
                         <h2 className='price'> ${cartItems.reduce((total, item) => total + (item.quantity * item.price), 0).toFixed(2)}</h2>
                     </div>
                 </div>
-                <OrdinaryButtons props="Start new order" onClick={() => { }} />
+                <OrdinaryButtons props="Start New Order" onClick={() => { }} />
             </div>
         </div>
     )

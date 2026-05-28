@@ -15,4 +15,14 @@
         margin-left: 2rem;
         padding: 2rem;
     }
+
+    .order-confirmed-overlay{
+        align-items: center;
+    }
+
+    .order-confirmed {
+        border-radius: 20px;
+        max-width: 250px;
+        margin: 10px;
+    }
 }
