@@ -16,13 +16,53 @@
         padding: 2rem;
     }
 
-    .order-confirmed-overlay{
-        align-items: center;
-    }
-
     .order-confirmed {
         border-radius: 20px;
-        max-width: 250px;
+        max-width: 430px;
         margin: 10px;
+        
+    }
+
+    .order-confirmed img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .order-confirmed .order-text h1 {
+        font-size: 2rem;
+    }
+
+    .order-confirmed{
+        font-size: 0.95rem;
+    }
+
+    .order-text p{
+        font-size: 0.8rem;
+    }
+
+
+    .order-confirmed .item-ordered {
+        width: 50px;
+        height: 50px;
+    }
+
+    .order-confirmed .item-card-order {
+        padding: 0.5rem 0;
+    }
+
+    .order-confirmed .order-total {
+        padding: 1rem;
+    }
+
+    .order-confirmed .order-total h2 {
+        font-size: 1.6rem;
+    }
+
+    .order-confirmed .item-name {
+        font-size: 0.95rem;
+    }
+
+    .order-confirmed .item-total-order span {
+        font-size: 1rem;
     }
 }
