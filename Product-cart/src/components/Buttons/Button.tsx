@@ -1,7 +1,7 @@
-import iconAddToCart from '../../../public/images/icon-add-to-cart.svg';
+import iconAddToCart from '/images/icon-add-to-cart.svg';
 import '../../stylesComponents/ButtonStyles.css';
-import iconIncrement from '../../../public/images/icon-increment-quantity.svg';
-import iconDecrement from '../../../public/images/icon-decrement-quantity.svg';
+import iconIncrement from '/images/icon-increment-quantity.svg';
+import iconDecrement from '/images/icon-decrement-quantity.svg';
 
 interface ButtonProps {
   updateCart: (dessert: any, quantity: number) => void;

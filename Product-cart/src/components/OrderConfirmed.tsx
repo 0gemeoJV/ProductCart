@@ -1,4 +1,4 @@
-import iconConfirmed from '../../public/images/icon-order-confirmed.svg';
+import iconConfirmed from '/images/icon-order-confirmed.svg';
 import '../stylesComponents/OrderConfirmedStyle.css';
 import OrdinaryButtons from './Buttons/OrdinaryButtons';
 
